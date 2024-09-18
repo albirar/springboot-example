@@ -1,0 +1,34 @@
+{
+	"entries": [
+		{
+			"timestamp": "2024-09-12T15:41:27Z",
+			"author": "O. Fornés",
+			"entry": "Registre 1"
+		},
+		{
+			"timestamp": "2024-09-12T15:50:27Z",
+			"author": "O. Fornés",
+			"entry": "Registre 2"
+		},
+		{
+			"timestamp": "2024-09-13T15:41:27Z",
+			"author": "O. Fornés",
+			"entry": "Registre 3"
+		},
+		{
+			"timestamp": "2024-09-13T15:50:27Z",
+			"author": "O. Fornés",
+			"entry": "Registre 4"
+		},
+		{
+			"timestamp": "2024-09-14T15:41:27Z",
+			"author": "O. Fornés",
+			"entry": "Registre 5"
+		},
+		{
+			"timestamp": "2024-09-14T15:50:27Z",
+			"author": "O. Fornés",
+			"entry": "Registre 6"
+		}
+	]
+}
