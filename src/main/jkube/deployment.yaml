@@ -1,0 +1,40 @@
+apiVersion: apps.openshift.io/v1
+kind: Deployment
+metadata:
+  name: ${oc.name}
+  labels:
+    name: ${oc.name}
+    version: ${oc.version}
+spec:
+  selector:
+    name: ${oc.name}
+    version: ${oc.version}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: ${oc.name}
+        version: ${oc.version}
+    spec:
+      containers:
+      - env:
+          - name: PROJECT_VERSION
+            value: ${project.version}
+          - name: SPRING_APPLICATION_JSON
+            valueFrom:
+              configMapKeyRef:
+                name: ${oc.name}-configmap
+                key: SPRING_APPLICATION_JSON
+        name: ${oc.name}
+        image: ${docker.image}
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - ${project.artifactId}
+      from:
+        kind: ImageStreamTag
+        name: ${oc.name}:${oc.version}
+        namespace: ${oc.namespace}
+    type: ImageChange

@@ -1,0 +1,13 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  namespace: ${oc.namespace}
+  name: ${oc.name}-buildconfig
+spec:
+  resources:
+    limits:
+      cpu: "600m"
+      memory: "512Mi"
+    requests:
+      cpu: "500m"
+      memory: "300Mi"

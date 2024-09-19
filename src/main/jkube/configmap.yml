@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ${oc.name}-configmap
+  labels:
+    name: ${oc.name}
+    version: ${oc.version}
+data:
+  SPRING_APPLICATION_JSON: |-
+     {
+       "logging": {
+         "level": {
+           "root": "DEBUG"
+         }
+       },
+       "server": {
+         "tomcat": {
+           "keep-alive-timeout": "-1",
+           "connection-timeout": "7200000",
+           "max-swallow-size": "-1"
+         }
+       },
+       "spring": {
+         "profiles": {
+           "active": "dev"
+         }
+       }
+     }

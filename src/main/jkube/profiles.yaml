@@ -1,0 +1,8 @@
+- name: spring-boot-service
+  generator:
+    includes:
+      - spring-boot
+  enricher:
+    excludes:
+      - jkube-service
+      - jkube-healthcheck-spring-boot

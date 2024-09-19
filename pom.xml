@@ -22,20 +22,20 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<jkube-plugin.version>1.17.0</jkube-plugin.version>
-		<docker.image>${project.artifactId}:${project.version}</docker.image>
-		<docker.from>registry.access.redhat.com/ubi9/openjdk-21-runtime:latest</docker.from>
-		<oc.name>${project.artifactId}</oc.name>
-		<oc.version>${project.version}</oc.version>
-		<oc.namespace>justicia</oc.namespace>
+<!--		<jkube-plugin.version>1.17.0</jkube-plugin.version>-->
+<!--		<docker.image>${project.artifactId}:${project.version}</docker.image>-->
+<!--		<docker.from>registry.access.redhat.com/ubi9/openjdk-21-runtime:latest</docker.from>-->
+<!--		<oc.name>${project.artifactId}</oc.name>-->
+<!--		<oc.version>${project.version}</oc.version>-->
+<!--		<oc.namespace>justicia</oc.namespace>-->
 
-		<!-- Namespace dependent properties -->
-		<oc.context-path.name>${project.artifactId}</oc.context-path.name>
-		<!-- per poder tener diferent context-path i route name -->
-		<oc.route.name>test</oc.route.name>
-		<!-- springboot-example-justicia-test.apps-crc.testing -->
-		<oc.route.host>${oc.route.name}.${oc.namespace}.apps-crc.testing</oc.route.host>
-		<oc.server.servlet.context-path>/${oc.context-path.name}</oc.server.servlet.context-path>
+<!--		 Namespace dependent properties -->
+<!--		<oc.context-path.name>${project.artifactId}</oc.context-path.name>-->
+<!--		 per poder tener diferent context-path i route name -->
+<!--		<oc.route.name>test</oc.route.name>-->
+<!--		 springboot-example-justicia-test.apps-crc.testing -->
+<!--		<oc.route.host>${oc.route.name}.${oc.namespace}.apps-crc.testing</oc.route.host>-->
+<!--		<oc.server.servlet.context-path>/${oc.context-path.name}</oc.server.servlet.context-path>-->
 
 		<!--		<jkube.generator.from>${docker.from}</jkube.generator.from>-->
 
@@ -116,17 +116,17 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.eclipse.jkube</groupId>
-				<artifactId>openshift-maven-plugin</artifactId>
-				<version>${jkube-plugin.version}</version>
-				<!--				<configuration>-->
-				<!--					<profile>spring-boot-service</profile>-->
-				<!--					<buildStrategy>s2i</buildStrategy>-->
-				<!--					<namespace>${oc.namespace}</namespace>-->
+<!--			<plugin>-->
+<!--				<groupId>org.eclipse.jkube</groupId>-->
+<!--				<artifactId>openshift-maven-plugin</artifactId>-->
+<!--				<version>${jkube-plugin.version}</version>-->
+<!--								<configuration>-->
+<!--									<profile>spring-boot-service</profile>-->
+<!--									<buildStrategy>s2i</buildStrategy>-->
+<!--									<namespace>${oc.namespace}</namespace>-->
 
-				<!--				</configuration>-->
-			</plugin>
+<!--								</configuration>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 

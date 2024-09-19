@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${oc.name}
+  labels:
+    name: ${oc.name}
+    version: ${oc.version}
+spec:
+  selector:
+    name: ${oc.name}
+    version: ${oc.version}
+  ports:
+  - name: http-${oc.name}
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  sessionAffinity: None
+  type: ClusterIP
